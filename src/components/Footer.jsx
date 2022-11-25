@@ -1,4 +1,4 @@
-import { FaDiscord, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "../styles/Button";
@@ -26,12 +26,12 @@ const Footer = () => {
         <div className="container grid grid-four-column">
           <div className="footer-about">
             <h3>Lokesh Debnath</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            {/* <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p> */}
           </div>
 
           {/* 2nd column */}
           <div className="footer-subscribe">
-            <h3>Subscribe to get important updates</h3>
+            <h3>Mail Lokesh to get hire</h3>
             <form action="#">
               <input
                 type="email"
@@ -45,14 +45,9 @@ const Footer = () => {
 
           {/* 3rs column  */}
           <div className="footer-social">
-            <h3>Follows Us</h3>
+            <h3>Follows Me</h3>
             <div className="footer-social--icons">
-              <div>
-                <FaDiscord className="icons" />
-              </div>
-              <div>
-                <FaInstagram className="icons" />
-              </div>
+              {/* Facebook link */}
               <div>
                 <a
                   href="https://www.facebook.com/lokesh.9733/"
@@ -62,12 +57,32 @@ const Footer = () => {
                   <FaFacebook className="icons" />
                 </a>
               </div>
+              {/* Instagram Link */}
+              <div>
+                <a
+                  href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flokesh.2001%3Figshid%3DYmMyMTA2M2Y%253D%26fbclid%3DIwAR0TTWmxtnVnEsetyBAj22vPvMSrq20RnirhPklWpZsUfhCTB2O809EQbTw&h=AT2cNZGjJoHs_uYKMUdpQ-Si7zz9B2aZVLD0BSIsVV553eXsky_AUNO3uZeCUoJxhcIvExPU5areUhUJybcd6WwfBAww1nHYIyjsoF6-C_CWlXDyuZkVmk0U_iZJqv4ZtTfb7w"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaInstagram className="icons" />
+                </a>
+              </div>
+              {/* GitHub link */}
+              <div>
+                <a
+                  href="https://github.com/Programmerlokesh"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub className="icons" />
+                </a>
+              </div>
             </div>
           </div>
 
           {/* 4th column  */}
           <div className="footer-contact">
-            <h3>Call Us</h3>
+            <h3>Call Me</h3>
             <h3>+91 9733116447</h3>
           </div>
         </div>
