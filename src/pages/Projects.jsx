@@ -1,37 +1,33 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { data } from "../data/lokeshData";
+import { Button } from "../styles/Button";
 
 const Projects = () => {
-  // const { services } = useGlobalContext();
-
-  // console.log(data);
+  const projectData = data;
 
   return (
     <Wrapper className="section">
       <h2 className="common-heading">My Projects</h2>
       <div className="container grid grid-three-column">
-        {/* {services.map((curElem) => {
-          const { id, title, images, description, brand } = curElem;
+        {projectData.map((curElem) => {
+          // const { id, preview, imageSrc, github, name, pageLink } = curElem;
           return (
-            <div className="card" key={id}>
+            <div className="card" key={curElem.id}>
               <figure>
-                <img src={images[0]} alt={brand} />
+                <img src={curElem.imageSrc} alt={curElem.name} />
               </figure>
               <div className="card-data">
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <NavLink to={"/services"}>
-                  <Button className="btn">Read more</Button>
-                </NavLink>
+                {/* <h3>{title}</h3>
+                <p>{description}</p> */}
+                <Button className="btn">
+                  <NavLink to={`/projects/${curElem.id}`}>Read more</NavLink>
+                </Button>
               </div>
             </div>
           );
-        })} */}
-        {/* {data.map((e, i) => (
-          <div key={i}>
-            <img src={e.imageSrc} alt="" />
-          </div>
-        ))} */}
+        })}
       </div>
     </Wrapper>
   );
@@ -44,7 +40,7 @@ const Wrapper = styled.section`
     max-width: 120rem;
   }
   .card {
-    border: 0.1rem solid rgb(170 170 170 / 40%);
+    /* border: 0.1rem solid rgb(170 170 170 / 40%); */
     .card-data {
       padding: 0 2rem;
     }
@@ -56,16 +52,14 @@ const Wrapper = styled.section`
     .btn {
       margin: 2rem auto;
       background-color: rgb(0 0 0 / 0%);
-      border: 0.1rem solid rgb(98 84 243);
+      /* border: 0.1rem solid #fff; */
       display: flex;
       justify-content: center;
       align-items: center;
-      color: rgb(98 84 243);
+      /* color: rgb(98 84 243); */
       font-size: 1.4rem;
-      &:hover {
-        background-color: rgb(98 84 243);
-        color: #fff;
-      }
+      background-color: rgb(98 84 243);
+      color: #fff;
     }
   }
   figure {
@@ -76,7 +70,7 @@ const Wrapper = styled.section`
     position: relative;
     overflow: hidden;
     transition: all 0.5s linear;
-    &::after {
+    /* &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -86,12 +80,12 @@ const Wrapper = styled.section`
       background-color: rgba(0, 0, 0, 0.5);
       transition: all 0.2s linear;
       cursor: pointer;
-    }
+    } */
     &:hover::after {
       width: 100%;
     }
     &:hover img {
-      transform: scale(1.2);
+      /* transform: scale(1.2); */
     }
     img {
       max-width: 90%;

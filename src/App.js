@@ -5,6 +5,7 @@ import { About, Contact, Error, Home, Projects } from "./pages";
 
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
+import ProjectCard from "./project/ProjectCard";
 
 const App = () => {
   const theme = {
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectCard />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Error />} />
         </Routes>
